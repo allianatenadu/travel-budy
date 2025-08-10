@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - TravelBuddy</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>TravelBuddy</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="destinations.html" class="nav-link">Destinations</a>
+                <a href="planning.html" class="nav-link">Plan Trip</a>
+                <a href="dashboard.html" class="nav-link">My Trips</a>
+                <a href="budget.html" class="nav-link">Budget</a>
+                <a href="profile.html" class="nav-link active">Profile</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="profile-container">
+                <!-- Profile Header -->
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <img id="profile-image" src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Profile">
+                        <button class="avatar-upload">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="profile-info">
+                        <h1 id="profile-name">John Doe</h1>
+                        <p id="profile-bio">Passionate traveler exploring the world one city at a time</p>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <span class="stat-number" id="trips-count">12</span>
+                                <span class="stat-label">Trips</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" id="countries-count">8</span>
+                                <span class="stat-label">Countries</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" id="cities-count">24</span>
+                                <span class="stat-label">Cities</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Tabs -->
+                <div class="profile-tabs">
+                    <button class="tab-btn active" data-tab="personal">Personal Info</button>
+                    <button class="tab-btn" data-tab="preferences">Preferences</button>
+                    <button class="tab-btn" data-tab="achievements">Achievements</button>
+                    <button class="tab-btn" data-tab="settings">Settings</button>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <!-- Personal Info Tab -->
+                    <div id="personal" class="tab-panel active">
+                        <div class="form-section">
+                            <h3>Personal Information</h3>
+                            <form id="personal-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="first-name">First Name</label>
+                                        <input type="text" id="first-name" value="John">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="last-name">Last Name</label>
+                                        <input type="text" id="last-name" value="Doe">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" value="john.doe@example.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone</label>
+                                        <input type="tel" id="phone" value="+1 (555) 123-4567">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bio">Bio</label>
+                                    <textarea id="bio" rows="3">Passionate traveler exploring the world one city at a time</textarea>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="location">Location</label>
+                                        <input type="text" id="location" value="New York, USA">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="birthdate">Birth Date</label>
+                                        <input type="date" id="birthdate" value="1990-01-15">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Preferences Tab -->
+                    <div id="preferences" class="tab-panel">
+                        <div class="form-section">
+                            <h3>Travel Preferences</h3>
+                            <form id="preferences-form">
+                                <div class="form-group">
+                                    <label>Preferred Travel Style</label>
+                                    <div class="radio-group">
+                                        <label class="radio-item">
+                                            <input type="radio" name="travel-style" value="budget"> Budget-conscious
+                                        </label>
+                                        <label class="radio-item">
+                                            <input type="radio" name="travel-style" value="comfort" checked> Comfort-focused
+                                        </label>
+                                        <label class="radio-item">
+                                            <input type="radio" name="travel-style" value="luxury"> Luxury
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Favorite Activities</label>
+                                    <div class="checkbox-group">
+                                        <label class="checkbox-item">
+                                            <input type="checkbox" value="culture" checked> Cultural Sites
+                                        </label>
+                                        <label class="checkbox-item">
+                                            <input type="checkbox" value="adventure" checked> Adventure Sports
+                                        </label>
+                                        <label class="checkbox-item">
+                                            <input type="checkbox" value="food"> Food & Culinary
+                                        </label>
+                                        <label class="checkbox-item">
+                                            <input type="checkbox" value="nature"> Nature & Wildlife
+                                        </label>
+                                        <label class="checkbox-item">
+                                            <input type="checkbox" value="beaches"> Beaches & Relaxation
+                                        </label>
+                                        <label class="checkbox-item">
+                                            <input type="checkbox" value="nightlife"> Nightlife & Entertainment
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="currency">Preferred Currency</label>
+                                        <select id="currency">
+                                            <option value="USD">USD - US Dollar</option>
+                                            <option value="EUR">EUR - Euro</option>
+                                            <option value="GBP">GBP - British Pound</option>
+                                            <option value="JPY">JPY - Japanese Yen</option>
+                                            <option value="CAD">CAD - Canadian Dollar</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="language">Language</label>
+                                        <select id="language">
+                                            <option value="en">English</option>
+                                            <option value="es">Español</option>
+                                            <option value="fr">Français</option>
+                                            <option value="de">Deutsch</option>
+                                            <option value="it">Italiano</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Save Preferences</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Achievements Tab -->
+                    <div id="achievements" class="tab-panel">
+                        <div class="achievements-section">
+                            <h3>Your Travel Achievements</h3>
+                            <div class="achievements-grid" id="achievements-grid">
+                                <!-- Dynamic content -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Tab -->
+                    <div id="settings" class="tab-panel">
+                        <div class="settings-section">
+                            <h3>Notification Settings</h3>
+                            <div class="settings-group">
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Trip Reminders</h4>
+                                        <p>Get notified about upcoming trips</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Budget Alerts</h4>
+                                        <p>Receive alerts when approaching budget limits</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Destination Updates</h4>
+                                        <p>Get updates about your saved destinations</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="settings-section">
+                            <h3>Privacy Settings</h3>
+                            <div class="settings-group">
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Public Profile</h4>
+                                        <p>Allow others to view your travel statistics</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Data Analytics</h4>
+                                        <p>Help improve TravelBuddy with usage data</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="settings-section danger-zone">
+                            <h3>Danger Zone</h3>
+                            <button class="btn btn-danger">Delete Account</button>
+                            <p>This action cannot be undone. All your data will be permanently deleted.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="nav-brand">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>TravelBuddy</span>
+                    </div>
+                    <p>Your ultimate travel planning companion for unforgettable adventures.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Planning</h4>
+                        <a href="destinations.html">Destinations</a>
+                        <a href="planning.html">Trip Planner</a>
+                        <a href="budget.html">Budget Tools</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Account</h4>
+                        <a href="dashboard.html">My Trips</a>
+                        <a href="profile.html">Profile</a>
+                        <a href="#">Settings</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="about.html">About Us</a>
+                        <a href="#">Help Center</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TravelBuddy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/profile.js"></script>
+</body>
+</html>

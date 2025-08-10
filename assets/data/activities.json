@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "City Walking Tour",
+    "type": "Culture",
+    "duration": "3 hours",
+    "cost": 25,
+    "description": "Explore the historic downtown area with a knowledgeable local guide"
+  },
+  {
+    "id": 2,
+    "name": "Museum Visit",
+    "type": "Culture",
+    "duration": "2 hours",
+    "cost": 15,
+    "description": "Discover art, history, and culture at the city's premier museum"
+  },
+  {
+    "id": 3,
+    "name": "Local Food Tour",
+    "type": "Food",
+    "duration": "4 hours",
+    "cost": 60,
+    "description": "Taste authentic local cuisine at hidden gems and popular eateries"
+  },
+  {
+    "id": 4,
+    "name": "Beach Day",
+    "type": "Beach",
+    "duration": "Full day",
+    "cost": 30,
+    "description": "Relax on pristine beaches with optional water sports activities"
+  },
+  {
+    "id": 5,
+    "name": "Mountain Hiking",
+    "type": "Adventure",
+    "duration": "6 hours",
+    "cost": 45,
+    "description": "Challenging hike with breathtaking views and photo opportunities"
+  },
+  {
+    "id": 6,
+    "name": "Cooking Class",
+    "type": "Food",
+    "duration": "3 hours",
+    "cost": 80,
+    "description": "Learn to prepare traditional dishes with local ingredients"
+  },
+  {
+    "id": 7,
+    "name": "Boat Tour",
+    "type": "Nature",
+    "duration": "4 hours",
+    "cost": 55,
+    "description": "Scenic boat ride with wildlife spotting opportunities"
+  },
+  {
+    "id": 8,
+    "name": "Art Gallery Visit",
+    "type": "Culture",
+    "duration": "2 hours",
+    "cost": 20,
+    "description": "Explore contemporary and classical art collections"
+  },
+  {
+    "id": 9,
+    "name": "Night Market Tour",
+    "type": "Food",
+    "duration": "3 hours",
+    "cost": 35,
+    "description": "Experience local nightlife and street food culture"
+  },
+  {
+    "id": 10,
+    "name": "Scuba Diving",
+    "type": "Adventure",
+    "duration": "Half day",
+    "cost": 120,
+    "description": "Underwater adventure with certified diving instructors"
+  },
+  {
+    "id": 11,
+    "name": "Wine Tasting",
+    "type": "Food",
+    "duration": "3 hours",
+    "cost": 70,
+    "description": "Sample local wines with expert sommelier guidance"
+  },
+  {
+    "id": 12,
+    "name": "Photography Walk",
+    "type": "Culture",
+    "duration": "4 hours",
+    "cost": 40,
+    "description": "Capture the city's beauty with professional photography tips"
+  },
+  {
+    "id": 13,
+    "name": "Spa Day",
+    "type": "Relaxation",
+    "duration": "Full day",
+    "cost": 150,
+    "description": "Rejuvenating spa treatments and wellness activities"
+  },
+  {
+    "id": 14,
+    "name": "Cultural Show",
+    "type": "Culture",
+    "duration": "2 hours",
+    "cost": 50,
+    "description": "Traditional music and dance performances"
+  },
+  {
+    "id": 15,
+    "name": "Bike Tour",
+    "type": "Adventure",
+    "duration": "4 hours",
+    "cost": 35,
+    "description": "Explore the city and countryside on two wheels"
+  }
+]

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Trip - TravelBuddy</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/planning.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>TravelBuddy</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="destinations.html" class="nav-link">Destinations</a>
+                <a href="planning.html" class="nav-link active">Plan Trip</a>
+                <a href="dashboard.html" class="nav-link">My Trips</a>
+                <a href="budget.html" class="nav-link">Budget</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>Plan Your Trip</h1>
+                <p>Create detailed itineraries with our smart planning tools</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="planning-container">
+                <!-- Trip Basic Info -->
+                <div class="planning-section">
+                    <h2>Trip Details</h2>
+                    <form id="trip-form" class="trip-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="trip-name">Trip Name</label>
+                                <input type="text" id="trip-name" required placeholder="e.g., European Adventure">
+                            </div>
+                            <div class="form-group">
+                                <label for="destination">Destination</label>
+                                <input type="text" id="destination" required placeholder="e.g., Paris, France">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="start-date">Start Date</label>
+                                <input type="date" id="start-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="end-date">End Date</label>
+                                <input type="date" id="end-date" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="travelers">Number of Travelers</label>
+                                <select id="travelers" required>
+                                    <option value="">Select</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5+">5+ People</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="budget">Estimated Budget</label>
+                                <select id="budget">
+                                    <option value="">Select Range</option>
+                                    <option value="500">Under $500</option>
+                                    <option value="1000">$500 - $1000</option>
+                                    <option value="2000">$1000 - $2000</option>
+                                    <option value="5000">$2000 - $5000</option>
+                                    <option value="5001">Over $5000</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="trip-type">Trip Type</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" value="Adventure"> Adventure
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" value="Culture"> Culture
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" value="Beach"> Beach
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" value="City"> City
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" value="Nature"> Nature
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" value="Food"> Food & Culinary
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Itinerary Planning -->
+                <div class="planning-section">
+                    <h2>Itinerary</h2>
+                    <div class="itinerary-container" id="itinerary-container">
+                        <!-- Dynamic days will be added here -->
+                    </div>
+                    <button type="button" id="add-day-btn" class="btn btn-outline">
+                        <i class="fas fa-plus"></i> Add Day
+                    </button>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="planning-actions">
+                    <button type="button" id="save-draft-btn" class="btn btn-secondary">Save as Draft</button>
+                    <button type="button" id="save-trip-btn" class="btn btn-primary">Save Trip</button>
+                    <button type="button" id="generate-suggestions" class="btn btn-outline">
+                        <i class="fas fa-magic"></i> Get AI Suggestions
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="nav-brand">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>TravelBuddy</span>
+                    </div>
+                    <p>Your ultimate travel planning companion for unforgettable adventures.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Planning</h4>
+                        <a href="destinations.html">Destinations</a>
+                        <a href="planning.html">Trip Planner</a>
+                        <a href="budget.html">Budget Tools</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Account</h4>
+                        <a href="dashboard.html">My Trips</a>
+                        <a href="profile.html">Profile</a>
+                        <a href="#">Settings</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="about.html">About Us</a>
+                        <a href="#">Help Center</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TravelBuddy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/planning.js"></script>
+</body>
+</html>

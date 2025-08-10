@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Planner - TravelBuddy</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/budget.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>TravelBuddy</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="destinations.html" class="nav-link">Destinations</a>
+                <a href="planning.html" class="nav-link">Plan Trip</a>
+                <a href="dashboard.html" class="nav-link">My Trips</a>
+                <a href="budget.html" class="nav-link active">Budget</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>Budget Planner</h1>
+                <p>Plan and track your travel expenses with smart budgeting tools</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Budget Overview -->
+            <div class="budget-overview">
+                <div class="budget-summary">
+                    <div class="summary-card">
+                        <h3>Total Budget</h3>
+                        <div class="amount" id="total-budget">$0</div>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Spent</h3>
+                        <div class="amount spent" id="total-spent">$0</div>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Remaining</h3>
+                        <div class="amount remaining" id="remaining-budget">$0</div>
+                    </div>
+                </div>
+                <div class="budget-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="budget-progress-fill"></div>
+                    </div>
+                    <span class="progress-text" id="budget-progress-text">0% of budget used</span>
+                </div>
+            </div>
+
+            <!-- Trip Selection -->
+            <div class="trip-selection">
+                <h2>Select Trip</h2>
+                <select id="trip-selector">
+                    <option value="">Create new budget or select a trip</option>
+                </select>
+                <button id="new-budget-btn" class="btn btn-outline">New Budget</button>
+            </div>
+
+            <!-- Budget Categories -->
+            <div class="budget-section">
+                <h2>Budget Categories</h2>
+                <div class="categories-grid" id="categories-grid">
+                    <!-- Dynamic content -->
+                </div>
+                <button id="add-category-btn" class="btn btn-outline">
+                    <i class="fas fa-plus"></i> Add Category
+                </button>
+            </div>
+
+            <!-- Expense Tracking -->
+            <div class="budget-section">
+                <h2>Recent Expenses</h2>
+                <div class="expense-form">
+                    <div class="form-row">
+                        <input type="text" id="expense-description" placeholder="Expense description">
+                        <input type="number" id="expense-amount" placeholder="Amount" step="0.01">
+                        <select id="expense-category">
+                            <option value="">Select Category</option>
+                        </select>
+                        <input type="date" id="expense-date">
+                        <button id="add-expense-btn" class="btn btn-primary">Add</button>
+                    </div>
+                </div>
+                <div class="expenses-list" id="expenses-list">
+                    <!-- Dynamic content -->
+                </div>
+            </div>
+
+            <!-- Budget Tips -->
+            <div class="budget-section">
+                <h2>Smart Budgeting Tips</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <i class="fas fa-piggy-bank"></i>
+                        <h4>Plan Ahead</h4>
+                        <p>Book flights and hotels early for better deals</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-utensils"></i>
+                        <h4>Local Food</h4>
+                        <p>Eat where locals eat for authentic and affordable meals</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-walking"></i>
+                        <h4>Free Activities</h4>
+                        <p>Look for free walking tours and city attractions</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-credit-card"></i>
+                        <h4>Track Spending</h4>
+                        <p>Monitor your daily expenses to stay on budget</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Modal -->
+        <div id="category-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Add Budget Category</h3>
+                <form id="category-form">
+                    <div class="form-group">
+                        <label for="category-name">Category Name</label>
+                        <input type="text" id="category-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category-budget">Budget Amount</label>
+                        <input type="number" id="category-budget" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category-icon">Icon</label>
+                        <select id="category-icon">
+                            <option value="fas fa-plane">✈️ Transportation</option>
+                            <option value="fas fa-bed">🏨 Accommodation</option>
+                            <option value="fas fa-utensils">🍽️ Food & Dining</option>
+                            <option value="fas fa-ticket-alt">🎫 Activities</option>
+                            <option value="fas fa-shopping-bag">🛍️ Shopping</option>
+                            <option value="fas fa-gas-pump">⛽ Fuel</option>
+                            <option value="fas fa-question">❓ Other</option>
+                        </select>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Add Category</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="nav-brand">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>TravelBuddy</span>
+                    </div>
+                    <p>Your ultimate travel planning companion for unforgettable adventures.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Planning</h4>
+                        <a href="destinations.html">Destinations</a>
+                        <a href="planning.html">Trip Planner</a>
+                        <a href="budget.html">Budget Tools</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Account</h4>
+                        <a href="dashboard.html">My Trips</a>
+                        <a href="profile.html">Profile</a>
+                        <a href="#">Settings</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="about.html">About Us</a>
+                        <a href="#">Help Center</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TravelBuddy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/budget.js"></script>
+</body>
+</html>

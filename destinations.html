@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - TravelBuddy</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/destinations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>TravelBuddy</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="destinations.html" class="nav-link active">Destinations</a>
+                <a href="planning.html" class="nav-link">Plan Trip</a>
+                <a href="dashboard.html" class="nav-link">My Trips</a>
+                <a href="budget.html" class="nav-link">Budget</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>Discover Your Next Destination</h1>
+                <p>Explore amazing places around the world with detailed guides and insider tips</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Search and Filters -->
+            <div class="search-section">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="destination-search" placeholder="Search destinations...">
+                </div>
+                <div class="filters">
+                    <select id="continent-filter">
+                        <option value="">All Continents</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Asia">Asia</option>
+                        <option value="North America">North America</option>
+                        <option value="South America">South America</option>
+                        <option value="Africa">Africa</option>
+                        <option value="Oceania">Oceania</option>
+                    </select>
+                    <select id="budget-filter">
+                        <option value="">All Budgets</option>
+                        <option value="Budget">Budget-Friendly</option>
+                        <option value="Mid-range">Mid-Range</option>
+                        <option value="Luxury">Luxury</option>
+                    </select>
+                    <select id="type-filter">
+                        <option value="">All Types</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Culture">Culture</option>
+                        <option value="Beach">Beach</option>
+                        <option value="City">City</option>
+                        <option value="Nature">Nature</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Destinations Grid -->
+            <div class="destinations-container">
+                <div class="destinations-grid" id="destinations-grid">
+                    <!-- Dynamic content loaded here -->
+                </div>
+            </div>
+
+            <!-- Destination Modal -->
+            <div id="destination-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div id="modal-body">
+                        <!-- Dynamic content -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="nav-brand">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>TravelBuddy</span>
+                    </div>
+                    <p>Your ultimate travel planning companion for unforgettable adventures.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Planning</h4>
+                        <a href="destinations.html">Destinations</a>
+                        <a href="planning.html">Trip Planner</a>
+                        <a href="budget.html">Budget Tools</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Account</h4>
+                        <a href="dashboard.html">My Trips</a>
+                        <a href="profile.html">Profile</a>
+                        <a href="#">Settings</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="about.html">About Us</a>
+                        <a href="#">Help Center</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TravelBuddy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/destinations.js"></script>
+</body>
+</html>

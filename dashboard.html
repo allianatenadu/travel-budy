@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Trips - TravelBuddy</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>TravelBuddy</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="destinations.html" class="nav-link">Destinations</a>
+                <a href="planning.html" class="nav-link">Plan Trip</a>
+                <a href="dashboard.html" class="nav-link active">My Trips</a>
+                <a href="budget.html" class="nav-link">Budget</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>My Trips</h1>
+                <p>Manage your travel plans and track your adventures</p>
+                <a href="planning.html" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Create New Trip
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Trip Statistics -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-suitcase-rolling"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="total-trips">0</h3>
+                        <p>Total Trips</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="countries-visited">0</h3>
+                        <p>Countries Visited</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="total-spent">$0</h3>
+                        <p>Total Spent</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="upcoming-trips">0</h3>
+                        <p>Upcoming Trips</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trip Filters -->
+            <div class="trip-filters">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Trips</button>
+                    <button class="filter-tab" data-filter="upcoming">Upcoming</button>
+                    <button class="filter-tab" data-filter="ongoing">In Progress</button>
+                    <button class="filter-tab" data-filter="completed">Completed</button>
+                    <button class="filter-tab" data-filter="draft">Drafts</button>
+                </div>
+                <div class="search-sort">
+                    <input type="text" id="trip-search" placeholder="Search trips...">
+                    <select id="trip-sort">
+                        <option value="date-desc">Newest First</option>
+                        <option value="date-asc">Oldest First</option>
+                        <option value="name-asc">Name A-Z</option>
+                        <option value="name-desc">Name Z-A</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Trips Grid -->
+            <div class="trips-container">
+                <div class="trips-grid" id="trips-grid">
+                    <!-- Dynamic content loaded here -->
+                </div>
+                <div id="no-trips" class="no-trips" style="display: none;">
+                    <i class="fas fa-suitcase"></i>
+                    <h3>No trips found</h3>
+                    <p>Start planning your first adventure!</p>
+                    <a href="planning.html" class="btn btn-primary">Create Trip</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trip Detail Modal -->
+        <div id="trip-modal" class="modal">
+            <div class="modal-content large">
+                <span class="close">&times;</span>
+                <div id="modal-body">
+                    <!-- Dynamic content -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="nav-brand">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>TravelBuddy</span>
+                    </div>
+                    <p>Your ultimate travel planning companion for unforgettable adventures.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Planning</h4>
+                        <a href="destinations.html">Destinations</a>
+                        <a href="planning.html">Trip Planner</a>
+                        <a href="budget.html">Budget Tools</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Account</h4>
+                        <a href="dashboard.html">My Trips</a>
+                        <a href="profile.html">Profile</a>
+                        <a href="#">Settings</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="about.html">About Us</a>
+                        <a href="#">Help Center</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TravelBuddy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
